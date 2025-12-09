@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="John Paul L. Villar">
+  <meta name="description" content="A Hunter'Info in Mhp3rd website">
+  <meta name="keywords" content="html,css, javascript,monsters">
+  <title>Monster Hunter Portable 3rd Database</title>
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link href="styles/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <!-- Navbar with Sidebar when mobile or table screen -->
+  <nav>
+    <ul class="sidebar">
+      <li onclick=hideSidebar()><a><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+      <li onclick="scrollToSection('info')"><a>Monster Info</a></li>
+      <li onclick="scrollToSection('video')"><a>Ecology Video</a></li>
+      <li onclick="scrollToSection('gallery')"><a>Observation Log</a></li>
+      <li onclick="scrollToSection('source')"><a>Sources</a></li>
+    </ul>
+    <ul>
+      <li><a href="#home"><img src="images/mhp3rd.png" alt="mhp3rd logo" style="width:60px;height:30px;"></a></li>
+      <li class="hideOnMobileScreen" onclick="scrollToSection('info')"><a>Monster Info</a></li>
+      <li class="hideOnMobileScreen" onclick="scrollToSection('video')"><a>Ecology Video</a></li>
+      <li class="hideOnMobileScreen" onclick="scrollToSection('gallery')"><a>Observation Log</a></li>
+      <li class="hideOnMobileScreen" onclick="scrollToSection('source')"><a>Sources</a></li>
+      <li class="menu-btn" onclick=showSidebar()><a class="close-btn"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+    </ul>
+  </nav>
+  <!-- Mhp3rd Description -->
+  <section class="main-hero" id="home">
+    <div class="hero-content">
+      <h2>Monster Hunter<br>Portable 3rd</h2>
+      <p><span class="label">Released: </span>December 1, 2010</p>
+      <p><span class="label">Platform: </span>PlayStation Portable(PSP)</p>
+      <p style="margin-top: 20px; opacity: 0.8;">Exerience and Explore in the Yukumo Village.Master the hunt</p>
+    </div>
+    <div class="hero-image"><img src="images/mhp3rdlogo.png" alt="mhp3rd icon"></div>
+  </section>
+  
+  <h1 id="monster">Hunter's Notes</h1>
+  
+  <input type="radio" name="monster" id="mon1" checked>
+  <input type="radio" name="monster" id="mon2">
+  <input type="radio" name="monster" id="mon3">
+  <input type="radio" name="monster" id="mon4">
+  <input type="radio" name="monster" id="mon5">
+  <input type="radio" name="monster" id="mon6">
+  <input type="radio" name="monster" id="mon7">
+  <input type="radio" name="monster" id="mon8"> 
+  <input type="radio" name="monster" id="mon9"> 
+  <input type="radio" name="monster" id="mon10"> 
+  <input type="radio" name="monster" id="mon11">
+  <input type="radio" name="monster" id="mon12">
+  
+  <div class="carousel-wrapper">
+    <button class="arrow" onclick="scrollList(-1)">&#10094;</button>
+  <div class="carousel-container" id="scrollContainer">
+    <label for="mon1" class="pic-label"><img src="images/zinogre.png" alt="mon1"></label>    <label for="mon2" class="pic-label"><img src="images/rathalos.webp" alt="mon2"></label> <label for="mon3" class="pic-label"><img src="images/silverrathalos.webp" alt="mon3"></label>
+    <label for="mon4" class="pic-label"><img src="images/tigrex.webp" alt="mon4"></label>    
+    <label for="mon5" class="pic-label"><img src="images/brutetigrex.webp" alt="mon5"></label>
+    <label for="mon6" class="pic-label"><img src="images/deviljho.webp" alt="mon6"></label> 
+    <label for="mon7" class="pic-label"><img src="images/nargacuga.webp" alt="mon7"></label>
+    <label for="mon8" class="pic-label"><img src="images/diablos.webp" alt="mon8"></label>  
+    <label for="mon9" class="pic-label"><img src="images/ukanlos.webp" alt="mon9"></label>  
+    <label for="mon10" class="pic-label"><img src="images/akantor.webp" alt="mon10"></label>
+    <label for="mon11" class="pic-label"><img src="images/jhenmohran.webp" alt="mon11"></label>
+    <label for="mon12" class="pic-label"><img src="images/alatreon.webp" alt="mon12"></label>
+  </div>
+   <button class="arrow" onclick="scrollList(1)">&#10095;</button>
+  </div>
+  
+  <!-- monster information -->
+  <div class="content-wrapper" id="info">
+    <div class="monster-content" id="content-1">
+      <div class="info-box">
+        <h2>Zinogre</h2>
+        <div class="stats-grid">
+          <!-- Stats that are long -->
+          <div class="stats-group full-width">
+            <h4>Monster Class </h4>
+            <p>
+              Fanged Wyvern
+            </p>
+            <h4>Physiology </h4>
+            <p>Zinogre is a quadrupedal monster with superficially lupine features. It has highly developed limbs, sharp fangs and claws. Its body is covered in turquoise scales, whitish fur, and tan bony spikes, and it has two prominent horns. Closer observation of its horns and the spikes on its back reveal that they are porous, presumably for hosting Thunderbugs when the monster charges itself.<br><br> When charged with electricity, the spikes on its back and its fur will stick up, and many of the bony and furred parts of its body will start to glow bright blue.</p>
+            </div>
+            
+            <div class="stats-group full-width">
+            <h4>Abilities</h4>
+            <p>Zinogre is a very agile monster, able to perform many impressive grounded and aerial maneuvers despite its hulking size. It primarily attempts to outmaneuver its prey before attacking with swipes from its well-developed forelimbs and tail, the former of which are often strong enough to kill prey in a single blow.<br><br>Uniquely, Zinogre has a symbiotic relationship with Thunderbugs and is able to summon them from the vicinity, utilizing their natural electrical abilities for its own purposes. Zinogre houses them within its horns and spikes and uses them to rapidly build up an electric charge throughout its body, although it must stop acting and leave itself open in order to do so. Once enough charge is accumulated, Zinogre's aggressiveness and strength will increase dramatically, and it becomes able to augment its physical blows with explosives bursts of sparks and lightning. It also gains the ability to summon bolts of lightning from range, or send forth clusters of electrified Thunderbugs to shock foes. However, this charge can be dispelled if Zinogre receives enough damage, upon which it will have to spend some time acting more passively while it recharges itself.</p>
+          </div>
+            
+          <div class="stats-group full-width">
+            <h4>Behavior</h4> 
+            <p>Zinogre are solitary hunters, though they live in groups, typically the male Zinogre will go alone when hunting, roaming their territory for prey. They are highly aggressive and will attack intruders on sight.</p>
+          </div>
+          
+            <div class="stats-group full-width">
+              <h4>Habitat</h4>
+              <p>Zinogre inhabits mostly temperate mountainous areas such as the Misty Peaks and Heaven's Mount.</p>
+            </div>
+          <!-- stats that are short -->
+          <div class="stats-group">
+            <h4>Elements</h4>
+            <ul class="icon-list">
+              <li><img src="images/thunder.webp">Thunder</li>
+            </ul>
+          </div>
+          
+          <div class="stats-group">
+            <h4>Ailments</h4>
+            <ul class="icon-list">
+              <li><img src="images/thunder.webp">Thunderblight</li>
+            </ul>
+          </div>
+          
+          <div class="stats-group">
+            <h4>Weakness</h4>
+            <ul class="icon-list">
+              <li><img src="images/ice.webp">Ice</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Ecology Video Section -->
+          <div class="video-box" id="video">
+            <h3>Ecology Video</h3>
+          <div class="video-wrapper">
+            <video controls>
+              <source src="videos/zinogreVideo.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+            </video>
+          </div>
+          </div>
+          <!-- Gallery Section -->
+          <div class="gallery-box" id="gallery">
+            <h3>Observation log</h3>
+            <div class="gallery-item"><img src="images/gallery1.webp"></div>
+            <div class="gallery-item"><img src="images/gallery2.webp"></div>
+            <div class="gallery-item"><img src="images/gallery3.webp"></div>
+            <div class="gallery-item"><img src="images/gallery4.webp"></div>
+            <div class="gallery-item"><img src="images/gallery5.webp"></div>
+            <div class="gallery-item"><img src="images/gallery6.webp"></div>
+          </div>
+          <div class="source-box" id="source">
+            <p>Want to learn more about this monster?</p><a href="https://monsterhunter.fandom.com/wiki/Zinogre" target="_blank" class="source-btn">Monster Hunter Zinogre Wiki Fandom</a>
+          </div>
+    </div>
+  <div class="monster-content" id="content-2">
+      <div class="info-box" id="info">
+        <h2>Rathalos</h2>
+        <div class="stats-grid">
+          <!-- Stats that are long -->
+          <div class="stats-group full-width">
+            <h4>Monster Class </h4>
+            <p>
+              Flying Wyvern
+            </p>
+            <h4>Physiology </h4>
+            <p>Rathalos are large, bipedal wyverns with a spiny, armored hide covering their body. Their outer shell features much brighter and more vibrant colors than that of their female counterpart, the Rathian. It is primarily bright red, with black markings throughout. Like the Rathian, Rathalos possess a flame sac which is used to produce deadly flaming projectiles from the mouth. The talons upon their feet are highly poisonous and are known to inflict toxic mortal wounds on larger prey. In addition, their long, thick tail features a heavy spiked club at the end. Rathalos' wing membranes feature ornate patterns which are likely used to attract potential mates.</p></div>
+            
+          <div class="stats-group full-width">
+            <h4>Abilities</h4>
+            <p>Rathalos are expert flyers, and as such are prone to hunting from the skies. By launching a surprise aerial attack, they can inflict poisonous wounds with their talons or burn prey with flaming projectiles. On the ground, Rathalos remain formidable opponents. Using their powerful legs, they can chase down prey from a distance or inflict blunt-force damage with their clubbed tail. At a close enough range, they are known to use their sharp teeth to bite at foes as well. Some Rathalos are capable of staying in the air and launching a "few" fireballs before landing back to the ground.</p>
+          </div>
+            
+          <div class="stats-group full-width">
+            <h4>Behavior</h4> 
+            <p>Rathalos are highly territorial monsters, and as such, are aggressive towards intruders. They will chase away or attempt to kill any monster which may pose a threat to their land. While hunting, Rathalos will stalk prey from the air before swooping in for the kill. Once they have successfully brought down their prey, they will carry it away to eat in private, safe from scavengers or other large monsters which might attempt to steal the kill.</p>
+          </div>
+          
+            <div class="stats-group full-width">
+              <h4>Habitat</h4>
+              <p>Rathalos have been spotted in many kinds of environments, from the temperate Forest and Hills to the extreme heat of the Volcano. As a master of flight, they will travel far and wide, searching for prey from the skies. Rathalos is also the apex predator of the Ancient Forest alongside Nargacuga.</p>
+            </div>
+          <!-- stats that are short -->
+          <div class="stats-group">
+            <h4>Elements</h4>
+            <ul class="icon-list">
+              <li><img src="images/fire.webp">Fire</li>
+            </ul>
+          </div>
+          
+          <div class="stats-group">
+            <h4>Ailments</h4>
+            <ul class="icon-list">
+              <li><img src="images/fire.webp">Fireblight</li>
+              <li><img src="images/poison.webp">Poison</li>
+              <li><img src="images/stun.webp">Stun</li>
+            </ul>
+          </div>
+          
+          <div class="stats-group">
+            <h4>Weakness</h4>
+            <ul class="icon-list">
+              <li><img src="images/ice.webp">Ice</li>
+              <li><img src="images/thunder.webp">Thunder</li>
+              <li><img src="images/water.webp">Water</li>
+              <li><img src="images/dragon.webp">Dragon</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Ecology Video Section -->
+          <div class="video-box" id="video">
+            <h3>Ecology Video</h3>
+          <div class="video-wrapper">
+            <video controls>
+              <source src="videos/rathalosVideo.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+            </video>
+          </div>
+          </div>
+          <!-- Gallery Section -->
+          <div class="gallery-box" id="gallery">
+            <h3>Observation log</h3>
+            <div class="gallery-item"><img src="images/rathalos1.webp"></div>
+            <div class="gallery-item"><img src="images/rathalos2.webp"></div>
+            <div class="gallery-item"><img src="images/rathalos3.webp"></div>
+            <div class="gallery-item"><img src="images/rathalos4.webp"></div>
+            <div class="gallery-item"><img src="images/rathalos5.webp"></div>
+            <div class="gallery-item"><img src="images/rathalos6.webp"></div>
+          </div>
+          
+          <div class="source-box" id="source">
+            <p>Want to Learn More About This Monster?</p><a href="https://monsterhunter.fandom.com/wiki/Rathalos" target="_blank" class="source-btn">Monster Hunter Rathalos Wiki Fandom</a>
+          </div>
+    </div>
+  
+   <div class="monster-content" id="content-3">
+      <div class="info-box">
+        <h2>Silver Rathalos</h2>
+        <div class="stats-grid">
+          <!-- Stats that are long -->
+          <div class="stats-group full-width">
+            <h4>Monster Class </h4>
+            <p>
+              Flying Wyvern
+            </p>
+            <h4>Physiology </h4>
+            <p>As a Rathalos rare species, he retains the standard characteristics of the species, although he has some differences. This Rare Species features a shining silver carapace from head to tail with black markings along the spine. He is notably slightly larger than the average Rathalos. After activating its “Incandescent” state, his head, chest, and the area between the neck and wings are lit with blue flames.</p></div>
+            
+          <div class="stats-group full-width">
+            <h4>Abilities</h4>
+            <p>He frequently barrages hunters with his triple fireball and aerial claw attacks. When on ground, he tends to use far more tail whips than bites and will charge hunters less frequently. Silver Rathalos also appears to go into a state of rage more often than his red or blue counterparts. He can enter the <strong>Incandescent state</strong> where his attacks becomes even more aggressive.</p>
+          </div>
+            
+          <div class="stats-group full-width">
+            <h4>Behavior</h4> 
+            <p>Silver Rathalos is much more dangerous than the common species. He prefers aerial attacks to ground-based ones.</p>
+          </div>
+          
+            <div class="stats-group full-width">
+              <h4>Habitat</h4>
+              <p>He is rarely found in the Swamp, Old Swamp, or Forest and Hills, but can most often be seen at the top of ancient Towers. The Hunters Guild goes out searching for Silver Rathalos in other lands so they can be hunted in special events, where they're placed in Arena and pitted against Hunters.</p>
+            </div>
+          <!-- stats that are short -->
+          <div class="stats-group">
+            <h4>Elements</h4>
+            <ul class="icon-list">
+              <li><img src="images/fire.webp">Fire</li>
+            </ul>
+          </div>
+          
+          <div class="stats-group">
+            <h4>Ailments</h4>
+            <ul class="icon-list">
+              <li><img src="images/fire.webp">Fireblight</li>
+              <li><img src="images/poison.webp">Poison</li>
+              <li><img src="images/stun.webp">Stun</li>
+            </ul>
+          </div>
+          
+          <div class="stats-group">
+            <h4>Weakness</h4>
+            <ul class="icon-list">
+              <li><img src="images/thunder.webp">Thunder</li>
+              <li><img src="images/water.webp">Water</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Ecology Video Section -->
+          <div class="video-box">
+            <h3>Ecology Video</h3>
+          <div class="video-wrapper">
+            <video controls>
+              <source src="videos/silosVideo.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+            </video>
+          </div>
+          </div>
+          <!-- Gallery Section -->
+          <div class="gallery-box">
+            <h3>Observation log</h3>
+            <div class="gallery-item"><img src="images/silverrathalos1.webp"></div>
+            <div class="gallery-item"><img src="images/silverrathalos2.webp"></div>
+            <div class="gallery-item"><img src="images/silverrathalos3.webp"></div>
+            <div class="gallery-item"><img src="images/silverrathalos4.webp"></div>
+            <div class="gallery-item"><img src="images/silverrathalos5.webp"></div>
+            <div class="gallery-item"><img src="images/silverrathalos6.webp"></div>
+          </div>
+          
+          <div class="source-box">
+            <p>Want to Learn More About This Monster?</p><a href="https://monsterhunter.fandom.com/wiki/Silver_Rathalos" target="_blank" class="source-btn">Monster Hunter Silver Rathalos Wiki Fandom</a>
+          </div>
+    </div>
+    
+    <div class="monster-content" id="content-4">
+      <div class="info-box">
+        <h2>Tigrex</h2>
+        <div class="stats-grid">
+          <!-- Stats that are long -->
+          <div class="stats-group full-width">
+            <h4>Monster Class </h4>
+            <p>
+              Flying Wyvern
+            </p>
+            <h4>Physiology </h4>
+            <p>Tigrex is a large, quadrupedal wyvern characterized by its massive T-rex head and jaws, powerful limbs with large wings, and striking yellow/blue striped coloration. The top of its head is tipped with a pair of horn-like ears, and its segmented tail ends with a spiny protrusion.</p></div>
+            
+          <div class="stats-group full-width">
+            <h4>Abilities</h4>
+            <p>As a quadrupedal wyvern, its wings have evolved into forelegs, which allows it to run at very fast speeds. Though it possesses a pair of adequately-developed wings, it is rarely seen flying in a traditional sense. It is in fact more prone to gliding from location to location. It has a powerful set of lungs which gives it the ability to produce extremely loud, concussive roars which can physically damage nearby objects. Unlike many other monsters, Tigrex does not attack with any elements, a trait it shares with the Monoblos and its cousins. Rather, it relies on its sheer brute strength and an ear-splitting roar to bring down opponents.</p>
+          </div>
+            
+          <div class="stats-group full-width">
+            <h4>Behavior</h4> 
+            <p>Tigrex will usually attempt to intimidate would-be attackers with an ear-splitting roar. If combat becomes intense enough, it will flush blood to its forelimbs, face, and eyes, in order to give its skin a bright-red glow as an effort to further intimidate attackers.</p>
+          </div>
+          
+            <div class="stats-group full-width">
+              <h4>Habitat</h4>
+              <p>The Tigrex can be found in many different environments. Like many wyverns, it will travel far and wide in search of prey.</p>
+            </div>
+          <!-- stats that are short -->
+          <div class="stats-group">
+            <h4>Elements</h4>
+            <ul class="icon-list">
+              <li><img src="images/fire.webp">Fire (on fiery terrains)</li>
+              <li><img src="images/water.webp">Water (on watery terrains)</li>
+              <li><img src="images/ice.webp">Ice (on icy and snowy terrain)</li>
+            </ul>
+          </div>
+          
+          <div class="stats-group">
+            <h4>Ailments</h4>
+            <ul class="icon-list">
+              <li><img src="images/snowman.webp">Snowman (on snowy terrain)</li>
+              <li><img src="images/fire.webp">Fireblight</li>
+              <li><img src="images/water.webp">Waterblight</li>
+              <li><img src="images/ice.webp">iceblight</li>
+              <li><img src="images/effluvium.webp">(on effluvium gas terrain)</li>
+            </ul>
+          </div>
+          
+          <div class="stats-group">
+            <h4>Weakness</h4>
+            <ul class="icon-list">
+              <li><img src="images/thunder.webp">Thunder</li>
+              <li><img src="images/dragon.webp">Dragon</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Ecology Video Section -->
+          <div class="video-box">
+            <h3>Ecology Video</h3>
+          <div class="video-wrapper">
+            <video controls>
+              <source src="videos/tigrexVideo.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+            </video>
+          </div>
+          </div>
+          <!-- Gallery Section -->
+          <div class="gallery-box">
+            <h3>Observation log</h3>
+            <div class="gallery-item"><img src="images/tigrex1.webp"></div>
+            <div class="gallery-item"><img src="images/tigrex2.webp"></div>
+            <div class="gallery-item"><img src="images/tigrex3.webp"></div>
+            <div class="gallery-item"><img src="images/tigrex4.webp"></div>
+            <div class="gallery-item"><img src="images/tigrex5.webp"></div>
+            <div class="gallery-item"><img src="images/tigrex6.webp"></div>
+          </div>
+          
+          <div class="source-box">
+            <p>Want to Learn More About This Monster?</p><a href="https://monsterhunter.fandom.com/wiki/Tigrex" target="_blank" class="source-btn">Monster Hunter Tigrex Wiki Fandom</a>
+          </div>
+    </div>
+    
+    <div class="monster-content" id="content-5">
+      <div class="info-box">
+        <h2>Brute Tigrex</h2>
+        <div class="stats-grid">
+          <!-- Stats that are long -->
+          <div class="stats-group full-width">
+            <h4>Monster Class </h4>
+            <p>
+              Flying Wyvern
+            </p>
+            <h4>Physiology </h4>
+            <p>Brute Tigrex features a darker, more muted color palette of various shades of grey, brown, and beige. It apparently possesses a more robust set of lungs than the common species, as evidenced by its increased roaring capacity. It has a more powerful set of forelimbs, and has adapted to live in harsher environments than any other variety of Tigrex.
+            </p>
+          </div>
+            
+          <div class="stats-group full-width">
+            <h4>Abilities</h4>
+            <p>Brute Tigrex is capable of using its powerful forelimbs to trample opponents, and can produce incredibly concussive roars which can send nearby objects flying.</p>
+          </div>
+            
+          <div class="stats-group full-width">
+            <h4>Behavior</h4> 
+            <p>This subspecies will exhibit similar behavior to its common counterpart, but it is more brutal and aggressive when approaching and engaging prey and attackers alike.</p>
+          </div>
+          
+            <div class="stats-group full-width">
+              <h4>Habitat</h4>
+              <p>Brute Tigrex is known to inhabit harsh environments such as Volcanoes and Deserts.</p>
+            </div>
+          <!-- stats that are short -->
+          <div class="stats-group">
+            <h4>Elements</h4>
+            <ul class="icon-list">
+              <li>(None)</li>
+            </ul>
+          </div>
+          
+          <div class="stats-group">
+            <h4>Ailments</h4>
+            <ul class="icon-list">
+              <li><img src="images/fire.webp">Fireblight (on fiery terrain)</li>
+              <li><img src="images/water.webp">Waterblight (on watery terrain)</li>
+              <li><img src="images/effluvium.webp">Effluvium (on effluvium gas terrain)</li>
+            </ul>
+          </div>
+          
+          <div class="stats-group">
+            <h4>Weakness</h4>
+            <ul class="icon-list">
+              <li><img src="images/water.webp">Water</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Ecology Video Section -->
+          <div class="video-box">
+            <h3>Ecology Video</h3>
+          <div class="video-wrapper">
+            <video controls>
+              <source src="videos/brutetigrexVideo.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+            </video>
+          </div>
+          </div>
+          <!-- Gallery Section -->
+          <div class="gallery-box">
+            <h3>Observation log</h3>
+            <div class="gallery-item"><img src="images/brutetigrex1.webp"></div>
+            <div class="gallery-item"><img src="images/brutetigrex2.webp"></div>
+            <div class="gallery-item"><img src="images/brutetigrex3.webp"></div>
+            <div class="gallery-item"><img src="images/brutetigrex4.webp"></div>
+            <div class="gallery-item"><img src="images/brutetigrex5.webp"></div>
+            <div class="gallery-item"><img src="images/brutetigrex6.webp"></div>
+          </div>
+          
+          <div class="source-box">
+            <p>Want to Learn More About This Monster?</p><a href="https://monsterhunter.fandom.com/wiki/Brute_Tigrex" target="_blank" class="source-btn">Monster Hunter Brute Tigrex Wiki Fandom</a>
+          </div>
+    </div>
+    
+    <div class="monster-content" id="content-6">
+      <div class="info-box">
+        <h2>Deviljho</h2>
+        <div class="stats-grid">
+          <!-- Stats that are long -->
+          <div class="stats-group full-width">
+            <h4>Monster Class </h4>
+            <p>
+              Brute Wyvern
+            </p>
+            <h4>Physiology </h4>
+            <p>Deviljho is a very large, bipedal Brute Wyvern characterized by its uniform forest green coloration and muscular upper body. Its thick hide is littered with short, jagged spines that reach a maximum height along the back and tail. Deviljho has a narrow snout with a large lower jaw, covered in multiple rows of teeth spreading outwards from the mouth. It has massive, powerful hind legs, but tiny, poorly developed forelegs that it rarely utilizes. When enraged, Deviljho's back and shoulder muscles swell considerably revealing scars. During this period, areas of its skin will take on a bright red coloration.
+            </p>
+          </div>
+            
+          <div class="stats-group full-width">
+            <h4>Abilities</h4>
+            <p>Deviljho is endowed with extremely developed musculature that grants it unparalleled physical strength and stamina. Of note are its powerful jaws, assisted by sheer muscular strength, which can deliver bone-crunching bites to potential targets, and can also pick up and throw large objects or even prey. In addition, its powerful hind legs allow it to run at relatively high speed and leap considerable distances towards prey, and a combination of both powerful neck muscles and a durable skull allow it to use its head as a mace/a battering weapon against its enemies. When enraged, Deviljho is capable of producing a mysterious clouded emission that can be shot out of the mouth in a stream at prey. This substance contains the Dragon Element and can be very deadly to hunters as well as other monsters.</p>
+          </div>
+            
+          <div class="stats-group full-width">
+            <h4>Behavior</h4> 
+            <p>Deviljho is a nomadic monster, prone to wandering vast distances in search of prey. Its status as a super-predator allows it to overtake the territory of any monster that stands in its path. Because of its extreme metabolism and equally extreme need for sustenance to survive, Deviljho is always in search of food sources, and will attempt to kill and eat anything on sight. It is known to be cannibalistic and is also prone to eating prey alive in order to waste as little time as possible in replenishing its energy.</p>
+          </div>
+          
+            <div class="stats-group full-width">
+              <h4>Habitat</h4>
+              <p>Because of its nomadic nature, Deviljho is known to inhabit a wide variety of environments, such as Tundra, Deserted Island, and Volcano, and has even been seen as far as the New World. Because of its immense appetite, its presence is often disruptive to the natural ecosystem, to the point of causing localized extinction events.</p>
+            </div>
+          <!-- stats that are short -->
+          <div class="stats-group">
+            <h4>Elements</h4>
+            <ul class="icon-list">
+              <li><img src="images/dragon.webp">Dragon</li>
+            </ul>
+          </div>
+          
+          <div class="stats-group">
+            <h4>Ailments</h4>
+            <ul class="icon-list">
+              <li><img src="images/defdown.webp"> Defence Down</li>
+              <li><img src="images/dragon.webp">Dragonblight</li>
+              <li><img src="images/fire.webp">Fireblight (on lava terrains)</li>
+              <li><img src="images/ice.webp">Iceblight (on icy terrains)</li>
+              <li><img src="images/water.webp">Waterblight (on watery terrains)</li>
+              <li><img src="images/effluvium.webp">Effluvium (on effluvium gas terrains</li>
+            </ul>
+          </div>
+          
+          <div class="stats-group">
+            <h4>Weakness</h4>
+            <ul class="icon-list">
+              <li><img src="images/thunder.webp">Thunder</li>
+              <li><img src="images/dragon.webp">Dragon</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Ecology Video Section -->
+          <div class="video-box">
+            <h3>Ecology Video</h3>
+          <div class="video-wrapper">
+            <video controls>
+              <source src="videos/deviljhoVideos.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+            </video>
+          </div>
+          </div>
+          <!-- Gallery Section -->
+          <div class="gallery-box">
+            <h3>Observation log</h3>
+            <div class="gallery-item"><img src="images/deviljho1.webp"></div>
+            <div class="gallery-item"><img src="images/deviljho2.webp"></div>
+            <div class="gallery-item"><img src="images/deviljho3.webp"></div>
+            <div class="gallery-item"><img src="images/deviljho4.webp"></div>
+            <div class="gallery-item"><img src="images/deviljho5.webp"></div>
+            <div class="gallery-item"><img src="images/deviljho6.webp"></div>
+          </div>
+          
+          <div class="source-box">
+            <p>Want to Learn More About This Monster?</p><a href="https://monsterhunter.fandom.com/wiki/Deviljho" target="_blank" class="source-btn">Monster Hunter Deviljho Wiki Fandom</a>
+          </div>
+    </div>
+    
+    <div class="monster-content" id="content-7">
+      <div class="info-box">
+        <h2>Nargacuga</h2>
+        <div class="stats-grid">
+          <!-- Stats that are long -->
+          <div class="stats-group full-width">
+            <h4>Monster Class </h4>
+            <p>
+              Flying Wyvern
+            </p>
+            <h4>Physiology </h4>
+            <p>It is a panther-like Flying Wyvern with a quadruped built. It has black scales, black fur and nightmarish red eyes, giving it the look and style of a predatory black panther. Its dark, feral appearance suggests that it may mainly be a nocturnal predator. This wyvern has been sighted within the Great Forest at both night and daytime, the Jungle, and also the Old Swamp. When it's in Rage Mode, its eyes glow bright red and leave a trail of reddish lines when Nargacuga moves. Also, its tail erects large spikes which can be flung and linked up with its attacks for devastating hits. Their vertebrae and tail muscles are extremely flexible, making the tail of Nargacuga also prehensile. Its tail is also its most powerful weapon. The scales at the end of the tail can also be shaken to produce rattling sounds similar to that of a rattlesnake.<br><br>Like Yian Kut-Ku, they are surprised by the shock of sound (Sonic Bombs, Barrel Bombs, etc.) which will make them enter rage mode as soon as they recover.</p></div>
+            
+          <div class="stats-group full-width">
+            <h4>Abilities</h4>
+            <p>Nargacuga has the ability to attack with almost every part of its body, mainly its bladed wings and its spiked tail. Its head can be used for biting, similar to Tigrex. Its bladed wings are used almost for the entire battle and deal high damage. Its tail tip, which can be cut with a white bar of sharpness or above, is extremely dangerous. When in Rage Mode its tail spikes will protrude until it gets out of it (Although they will protrude when it uses tail slams and it shoots tail spikes). Nargacuga also has extremely strong muscles that let it jump long distances and tall heights at high speed.</p>
+          </div>
+            
+          <div class="stats-group full-width">
+            <h4>Behavior</h4> 
+            <p>Nargacuga is a careful and cautious monster. It is very easy for it to sneak up to a hunter. Nargacuga lives in dark places that it has adapted to. It rests on high trees that are hard to reach, or maybe can't be reached, so hunters can't catch it by surprise for capturing it. Nargacuga will wake up when hunters are right in front of the tree due to its natural senses.</p>
+          </div>
+          
+            <div class="stats-group full-width">
+              <h4>Habitat</h4>
+              <p>Nargacuga is normally and mainly found in the Great Forest, although there are quests where Nargacuga can be found in the Old Swamp, Old Jungle, and Jungle. In Monster Hunter Portable 3rd Nargacuga can be found in the Misty Peaks. In Monster Hunter Generations Nargacuga can also be found in the Jurassic Frontier. As of Monster Hunter World: Iceborne, they can now be found in the Ancient Forest and the Coral Highlands, as well as the Guiding Lands.</p>
+            </div>
+          <!-- stats that are short -->
+          <div class="stats-group">
+            <h4>Elements</h4>
+            <ul class="icon-list">
+              <li>(None)</li>
+            </ul>
+          </div>
+          
+          <div class="stats-group">
+            <h4>Ailments</h4>
+            <ul class="icon-list">
+              <li>(None)</li>
+            </ul>
+          </div>
+          
+          <div class="stats-group">
+            <h4>Weakness</h4>
+            <ul class="icon-list">
+              <li><img src="images/thunder.webp">Thunder</li>
+              <li><img src="images/fire.webp">Fire</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Ecology Video Section -->
+          <div class="video-box">
+            <h3>Ecology Video</h3>
+          <div class="video-wrapper">
+            <video controls>
+              <source src="videos/nargacugaVideos.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+            </video>
+          </div>
+          </div>
+          <!-- Gallery Section -->
+          <div class="gallery-box">
+            <h3>Observation log</h3>
+            <div class="gallery-item"><img src="images/nargacuga1.webp"></div>
+            <div class="gallery-item"><img src="images/nargacuga2.webp"></div>
+            <div class="gallery-item"><img src="images/nargacuga3.webp"></div>
+            <div class="gallery-item"><img src="images/nargacuga4.webp"></div>
+            <div class="gallery-item"><img src="images/nargacuga5.webp"></div>
+            <div class="gallery-item"><img src="images/nargacuga6.webp"></div>
+          </div>
+          
+          <div class="source-box">
+            <p>Want to Learn More About This Monster?</p><a href="https://monsterhunter.fandom.com/wiki/Nargacuga" target="_blank" class="source-btn">Monster Hunter Nargacuga Wiki Fandom</a>
+          </div>
+    </div>
+    
+    <div class="monster-content" id="content-8">
+      <div class="info-box">
+        <h2>Diablos</h2>
+        <div class="stats-grid">
+          <!-- Stats that are long -->
+          <div class="stats-group full-width">
+            <h4>Monster Class </h4>
+            <p>
+              Flying Wyvern
+            </p>
+            <h4>Physiology </h4>
+            <p>Diablos are large, bipedal wyverns with powerful armor plating covering much of their body. Their most noteworthy feature is a pair of massive, solid bull-like horns above their red eyes. Diablos also possess a pair of tusk-like fangs and a large, spiny neck frill. Their tail ends with a heavy, studded club that can be used to ward off attackers. Diablos stand on a pair of stocky, wide-set legs and possess a broad upper body complete with thick, muscular wings.</p>
+            </div>
+            
+          <div class="stats-group full-width">
+            <h4>Abilities</h4>
+            <p>Diablos have the ability to burrow into the earth and travel underground, employing this tactic to surprise unsuspecting targets or slip away from a dangerous encounter. In addition, they are capable of producing a powerful roar that will stun most aggressors. Using their powerful legs in tandem with their heavy upper body and head, Diablos can run at high speeds to charge attackers with their horns, using the powerful momentum to maximize the potential for damage.</p>
+          </div>
+            
+          <div class="stats-group full-width">
+            <h4>Behavior</h4> 
+            <p>Diablos are herbivores, known to feed on the plentiful cacti of the desert. Despite this however, they are wildly aggressive and extremely territorial, and will pursue anything which enters their territory. Diablos are known to use their horns as weapons against attackers, but will also use them in bouts against other Diablos in battles for territory or mating rights. Diablos typically avoid flight for the purpose of transportation, as a disproportionally high mass prevents them from effectively flying for long periods of time. Instead, Diablos will use their wings to free themselves when trapped in the sand.</p>
+          </div>
+          
+            <div class="stats-group full-width">
+              <h4>Habitat</h4>
+              <p>Diablos are commonly found in dry, arid desert environments. The soft, loose earth allows for digging and the water-rich cacti provide them with both nutrition and hydration. However, in Monster Hunter 3 Ultimate and Monster Hunter 4 Ultimate, Diablos can also be found at the Deserted Island and Everwood.</p>
+            </div>
+          <!-- stats that are short -->
+          <div class="stats-group">
+            <h4>Elements</h4>
+            <ul class="icon-list">
+              <li>(None)</li>
+            </ul>
+          </div>
+          
+          <div class="stats-group">
+            <h4>Ailments</h4>
+            <ul class="icon-list">
+              <li>(None)</li>
+            </ul>
+          </div>
+          
+          <div class="stats-group">
+            <h4>Weakness</h4>
+            <ul class="icon-list">
+              <li><img src="images/ice.webp">Ice</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Ecology Video Section -->
+          <div class="video-box">
+            <h3>Ecology Video</h3>
+          <div class="video-wrapper">
+            <video controls>
+              <source src="videos/diablosVideos.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+            </video>
+          </div>
+          </div>
+          <!-- Gallery Section -->
+          <div class="gallery-box">
+            <h3>Observation log</h3>
+            <div class="gallery-item"><img src="images/diablos1.webp"></div>
+            <div class="gallery-item"><img src="images/diablos2.webp"></div>
+            <div class="gallery-item"><img src="images/diablos3.webp"></div>
+            <div class="gallery-item"><img src="images/diablos4.webp"></div>
+            <div class="gallery-item"><img src="images/diablos5.webp"></div>
+            <div class="gallery-item"><img src="images/diablos6.webp"></div>
+          </div>
+          
+          <div class="source-box">
+            <p>Want to Learn More About This Monster?</p><a href="https://monsterhunter.fandom.com/wiki/Diablos" target="_blank" class="source-btn">Monster Hunter Diablos Wiki Fandom</a>
+          </div>
+    </div>
+    
+    <div class="monster-content" id="content-9">
+      <div class="info-box">
+        <h2>Ukanlos</h2>
+        <div class="stats-grid">
+          <!-- Stats that are long -->
+          <div class="stats-group full-width">
+            <h4>Monster Class </h4>
+            <p>
+              Flying Wyvern
+            </p>
+            <h4>Physiology </h4>
+            <p>Ukanlos closely resembles Akantor and Odibatorasu in body structure and possesses the same quadrupedal gait. It has a silvery-white carapace which features a row of large, jagged fins along its back. It has a small, compact face which features glowing yellow eyes, sharp teeth, and a massive, shovel-like chin.<br><br>Like Akantor, Ukanlos is only a Flying Wyvern in terms of its evolutionary history; its wings have completely disappeared and thus it is incapable of flight.</p></div>
+            
+          <div class="stats-group full-width">
+            <h4>Abilities</h4>
+            <p>Its massive serrated shovel-like chin allows it to fling up large chunks of ice and to dig into the frozen icy surface. Once underground, the row of large razor sharp fins running along its spine help it to cut through the ice while swimming. This swimming can also cause large chunks of ice to be sent flying. It can produce a devastating ice beam from its mouth, and is known to use its heavy body weight to crush opponents. Despite its great size and weight, Ukanlos is known to be able to leap significant distances by slamming its massive tail on the ground to propel it forward.</p>
+          </div>
+            
+          <div class="stats-group full-width">
+            <h4>Behavior</h4> 
+            <p>Ukanlos lives a solitary life, and is fiercely territorial to any who intrude upon its land.</p>
+          </div>
+          
+            <div class="stats-group full-width">
+              <h4>Habitat</h4>
+              <p>Ukanlos has only ever been encountered in remote, frozen regions. It has been found exclusively in the farthest reaches of the Snowy Mountains, and in the Polar Field, close to the sea.</p>
+            </div>
+          <!-- stats that are short -->
+          <div class="stats-group">
+            <h4>Elements</h4>
+            <ul class="icon-list">
+              <li><img src="images/ice.webp">Ice</li>
+            </ul>
+          </div>
+          
+          <div class="stats-group">
+            <h4>Ailments</h4>
+            <ul class="icon-list">
+              <li><img src="images/ice.webp">Iceblight</li>
+              <li><img src="images/snowman.webp">Snowman</li>
+            </ul>
+          </div>
+          
+          <div class="stats-group">
+            <h4>Weakness</h4>
+            <ul class="icon-list">
+              <li><img src="images/thunder.webp">Thunder</li>
+              <li><img src="images/fire.webp">Fire</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Ecology Video Section -->
+          <div class="video-box">
+            <h3>Ecology Video</h3>
+          <div class="video-wrapper">
+            <video controls>
+              <source src="videos/ukanlosVideos.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+            </video>
+          </div>
+          </div>
+          <!-- Gallery Section -->
+          <div class="gallery-box">
+            <h3>Observation log</h3>
+            <div class="gallery-item"><img src="images/ukanlos1.webp"></div>
+            <div class="gallery-item"><img src="images/ukanlos2.webp"></div>
+            <div class="gallery-item"><img src="images/ukanlos3.webp"></div>
+            <div class="gallery-item"><img src="images/ukanlos4.webp"></div>
+            <div class="gallery-item"><img src="images/ukanlos5.webp"></div>
+            <div class="gallery-item"><img src="images/ukanlos6.webp"></div>
+          </div>
+          
+          <div class="source-box">
+            <p>Want to Learn More About This Monster?</p><a href="https://monsterhunter.fandom.com/wiki/Ukanlos" target="_blank" class="source-btn">Monster Hunter Ukanlos Wiki Fandom</a>
+          </div>
+    </div>
+    
+    <div class="monster-content" id="content-10">
+      <div class="info-box">
+        <h2>Akantor</h2>
+        <div class="stats-grid">
+          <!-- Stats that are long -->
+          <div class="stats-group full-width">
+            <h4>Monster Class </h4>
+            <p>
+              Flying Wyvern
+            </p>
+            <h4>Physiology </h4>
+            <p>The Akantor is a massive, vaguely snapping turtle-like wyvern that dwells in magma. Akantors are covered with massive reddish black spikes and durable shells, and have both large sharp claws on their legs but also a similar structure on its tail. The Akantor's most distinctive feature aside from its fearsome spikes are the pair of dreadful tusks on its head. These tusks are both nearly as long as the entirety of the head. The underside of the Akantor is a much tanner color than the rest of its body, and is comparatively lacking in dangerous protrusions.<br><br>The Akantor is classified as a Flying Wyvern due to its evolutionary line; Akantor is no longer capable of flight, and only has small nubs left of their original wings.</p></div>
+            
+          <div class="stats-group full-width">
+            <h4>Abilities</h4>
+            <p>Akantors are so powerful, they can have extremely negative effects on the environment they reside in. Predator and prey flee from Akantors and only the largest wyverns and Elder Dragons even dare challenge them. With their immense physical strength, numerous body spines, enormous tusks, and powerful roars Akantors are extremely deadly foes. If all that weren't enough produced inside Akantors mouth is a highly corrosive fluid meant to break down the defenses of prey, and with its exceptionally loud roars Akantors can create a sort "sonic beam" tainted with the Dragon Element powerful enough to shoot down airships flying by.</p>
+          </div>
+            
+          <div class="stats-group full-width">
+            <h4>Behavior</h4> 
+            <p>Akantors are highly aggressive and predatory - they are shown to be more than capable of taking down a Gravios. They are easily the apex predator of any ecosystem unfortunate enough to witness its presence, and can obliterate many monsters and hunters that dare challenge it. By virtue of its immense strength and ability to burrow through magma, not much can realistically stop an Akantor, short of an elder dragon or an experienced team of hunters. They will attack and kill almost anything on sight, often letting out a deafening roar before charging head on.</p>
+          </div>
+          
+            <div class="stats-group full-width">
+              <h4>Habitat</h4>
+              <p>Akantor is found in the Battleground, whilst in Monster Hunter Portable 3rd, it is fought in the Lava Canyon, and Monster Hunter 4 Ultimate, it is fought in the Ingle Isle.</p>
+            </div>
+          <!-- stats that are short -->
+          <div class="stats-group">
+            <h4>Elements</h4>
+            <ul class="icon-list">
+              <li><img src="images/fire.webp">Fire</li>
+            <li><img src="images/dragon.webp">Dragon</li>
+            </ul>
+          </div>
+          
+          <div class="stats-group">
+            <h4>Ailments</h4>
+            <ul class="icon-list">
+              <li><img src="images/fire.webp">Fireblight</li>
+              <li><img src="images/defdown.webp">Defense Down</li>
+            </ul>
+          </div>
+          
+          <div class="stats-group">
+            <h4>Weakness</h4>
+            <ul class="icon-list">
+              <li><img src="images/thunder.webp">Thunder [enraged]</li>
+              <li><img src="images/dragon.webp">Dragon</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Ecology Video Section -->
+          <div class="video-box">
+            <h3>Ecology Video</h3>
+          <div class="video-wrapper">
+            <video controls>
+              <source src="videos/akantorVideos.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+            </video>
+          </div>
+          </div>
+          <!-- Gallery Section -->
+          <div class="gallery-box">
+            <h3>Observation log</h3>
+            <div class="gallery-item"><img src="images/akantor1.webp"></div>
+            <div class="gallery-item"><img src="images/akantor2.webp"></div>
+            <div class="gallery-item"><img src="images/akantor3.webp"></div>
+            <div class="gallery-item"><img src="images/akantor4.webp"></div>
+            <div class="gallery-item"><img src="images/akantor5.webp"></div>
+            <div class="gallery-item"><img src="images/akantor6.webp"></div>
+          </div>
+          
+          <div class="source-box">
+            <p>Want to Learn More About This Monster?</p><a href="https://monsterhunter.fandom.com/wiki/Akantor" target="_blank" class="source-btn">Monster Hunter Akantor Wiki Fandom</a>
+          </div>
+    </div>
+    
+    <div class="monster-content" id="content-11">
+      <div class="info-box">
+        <h2>Jhen mohran</h2>
+        <div class="stats-grid">
+          <!-- Stats that are long -->
+          <div class="stats-group full-width">
+            <h4>Monster Class </h4>
+            <p>
+              Elder Dragon
+            </p>
+            <h4>Physiology</h4>
+            <p>Jhen Mohran is an extremely large monster, with a long, almost serpentine body shape. On each side of its head are sturdy, sharp-ended tusks which can be broken by hunters. Due to its back legs being vestigial, it moves either by dragging its enormous body along with its arms on the ground or by swimming in the sand. A rocky spine runs along its back, where valuable minerals can be found.</p>
+            </div>
+            
+          <div class="stats-group full-width">
+            <h4>Behavior</h4> 
+            <p>Typically, Jhen Mohran is a calm creature, but will attack approaching Dragonships if threatened. In self defense, it rams the ship with its body and throws large stones off its back. It takes little notice of hunters climbing on its back, focusing more on the Dragonship.</p>
+          </div>
+          
+            <div class="stats-group full-width">
+              <h4>Habitat</h4>
+              <p>It lives only in the Great Desert.</p>
+            </div>
+          <!-- stats that are short -->
+          <div class="stats-group">
+            <h4>Elements</h4>
+            <ul class="icon-list">
+              <li>(None)</li>
+            </ul>
+          </div>
+          
+          <div class="stats-group">
+            <h4>Ailments</h4>
+            <ul class="icon-list">
+              <li>(None)</li>
+            </ul>
+          </div>
+          
+          <div class="stats-group">
+            <h4>Weakness</h4>
+            <ul class="icon-list">
+              <li><img src="images/dragon.webp">Dragon</li>
+              <li><img src="images/ice.webp">Ice</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Ecology Video Section -->
+          <div class="video-box">
+            <h3>Ecology Video</h3>
+          <div class="video-wrapper">
+            <video controls>
+              <source src="videos/jhenmohranVideos.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+            </video>
+          </div>
+          </div>
+          <!-- Gallery Section -->
+          <div class="gallery-box">
+            <h3>Observation log</h3>
+            <div class="gallery-item"><img src="images/jhenmohran1.webp"></div>
+            <div class="gallery-item"><img src="images/jhenmohran2.webp"></div>
+            <div class="gallery-item"><img src="images/jhenmohran3.webp"></div>
+            <div class="gallery-item"><img src="images/jhenmohran4.webp"></div>
+            <div class="gallery-item"><img src="images/jhenmohran5.webp"></div>
+            <div class="gallery-item"><img src="images/jhenmohran6.webp"></div>
+          </div>
+          
+          <div class="source-box">
+            <p>Want to Learn More About This Monster?</p><a href="https://monsterhunter.fandom.com/wiki/Jhen_Mohran" target="_blank" class="source-btn">Monster Hunter Jhen Mohran Wiki Fandom</a>
+          </div>
+    </div>
+    
+    <div class="monster-content" id="content-12">
+      <div class="info-box">
+        <h2>Alatreon</h2>
+        <div class="stats-grid">
+          <!-- Stats that are long -->
+          <div class="stats-group full-width">
+            <h4>Monster Class </h4>
+            <p>
+              Flying Wyvern
+            </p>
+            <h4>Appearance</h4>
+            <p>Alatreon is a large quadrupedal Elder Dragon with a regal and imposing appearance, closely resembling that of a European dragon. Its robust frame is covered in sleek, backward-facing black scales with a blade-like texture. Its chest is heavily armored with a large, spiked patch of hardened scales. The limbs are thick and powerful, ending in sharp claws, and its long tail tapers to a muscular, segmented end. Its head is characterized by a sharp, beaklike mouth and two large, serrated horns that curve outward. The wings are broad and membranous, with a pronounced skeletal structure that supports their large size. Alatreon’s scales glow in varying colors, depending on the element it is actively channeling.</p></div>
+            
+          <div class="stats-group full-width">
+            <h4>Abilities</h4>
+            <p>Alatreon stands above all Elder Dragons just like Fatalis,[1] and is widely considered one of the most fearsome and unforgettable challenges in the Monster Hunter universe. It is an extremely powerful monster and the master of the Elements, possessing control over all of them (Dragon, Fire, Ice, Thunder and Water). It can shoot heavy blasts of flame, breathe freezing air with sharp ice crystals, summon striking bolts of lightning, spray jets of ignitable fluid, and infuse its body with potent draconic energy. In addition to freely wielding multiple elements simultaneously, their sharp scales constantly emit elemental energy, imbuing them with different properties. Its horns are seemingly responsible for much of its control over the elements, so its powers can be temporarily weakened by breaking them, or by dealing sufficient elemental damage in turn.<br><br>In Monster Hunter World: Iceborne, it has three modes: Fire Active, Ice Active, and Dragon Active.<br><br>In <strong>Fire Active mode</strong>, it is immune to the Fire element, resistant to Thunder and Dragon elements, moderately weak to Water, and weak to Ice.<br><br>In <strong>Ice Active</strong> mode, it is immune to the Ice element, resistant to Water and Dragon elements, moderately weak to Thunder, and weak to Fire.<br><br>In <strong>Dragon Active</strong>mode, it has no immunities but is resistant to Fire, Ice, Thunder, and Water elements, with only a moderate weakness to the Dragon element.<br><br>In all its modes, it can freely wield all the elements. However, in Fire Active mode, it tends to favor more the Fire element over Ice; in Ice Active mode, it prioritizes more the Ice element over Fire; and in Dragon Active mode, it uses all the elements with equal frequency.<br><br>Alatreon's immense power stands among the pinnacle of Elder Dragons and it is regarded as a living natural disaster, capable of causing storms and widespread destruction wherever it resides. Alatreon’s ultimate move, Escaton Judgment, is the peak of its destructive power. This catastrophic attack releases an immense surge of elemental energy, capable of annihilating everything in its path. Surviving this devastating onslaught requires more than just skill—it demands strategic preparation and the ability to counter Alatreon’s elemental cycles.</p>
+          </div>
+            
+          <div class="stats-group full-width">
+            <h4>Behavior</h4> 
+            <p>Alatreon tend to be solitary and reclusive, generally residing in extreme environments isolated far from other life. They are very territorial, extremely easy to anger, and will unleash their power with reckless abandon whenever provoked. This may be the reason why no other monsters live in the Sacred Land where it usually resides.</p>
+          </div>
+          
+            <div class="stats-group full-width">
+              <h4>Habitat</h4>
+              <p>Alatreon can be found in the Sacred Land, a special area within the Volcano, and it presumably has access to any point within the volcano when hunting for food. It has also been sighted on Ingle Isle and even in underwater depths, within the abyssal trenches. It also ventured to the New World with the sole goal of confronting Safi'jiiva and destroy its cocoons, which is why it has been spotted in the Secluded Valley.</p>
+            </div>
+          <!-- stats that are short -->
+          <div class="stats-group">
+            <h4>Elements</h4>
+            <ul class="icon-list">
+              <li><img src="images/dragon.webp">Dragon</li>
+              <li><img src="images/fire.webp">Fire</li>
+              <li><img src="images/ice.webp">Ice</li>
+              <li><img src="images/thunder.webp">Thunder</li>
+            </ul>
+          </div>
+          
+          <div class="stats-group">
+            <h4>Ailments</h4>
+            <ul class="icon-list">
+              <li><img src="images/dragon.webp">Dragonblight</li>
+              <li><img src="images/fire.webp">Fireblight</li>
+              <li><img src="images/ice.webp">Iceblight</li>
+              <li><img src="images/thunder.webp">Thunderblight</li>
+              <li><img src="images/snowman.webp">Snowman</li>
+            </ul>
+          </div>
+          
+          <div class="stats-group">
+            <h4>Weakness</h4>
+            <ul class="icon-list">
+              <li><img src="images/thunder.webp">Thunder</li>
+              <li><img src="images/water.webp">Water</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Ecology Video Section -->
+          <div class="video-box">
+            <h3>Ecology Video</h3>
+          <div class="video-wrapper">
+            <video controls>
+              <source src="videos/alatreonVideo.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+            </video>
+          </div>
+          </div>
+          <!-- Gallery Section -->
+          <div class="gallery-box">
+            <h3>Observation log</h3>
+            <div class="gallery-item"><img src="images/alatreon1.webp"></div>
+            <div class="gallery-item"><img src="images/alatreon2.webp"></div>
+            <div class="gallery-item"><img src="images/alatreon3.webp"></div>
+            <div class="gallery-item"><img src="images/alatreon4.webp"></div>
+            <div class="gallery-item"><img src="images/alatreon5.webp"></div>
+            <div class="gallery-item"><img src="images/alatreon6.webp"></div>
+          </div>
+          
+          <div class="source-box">
+            <p>Want to Learn More About This Monster?</p><a href="https://monsterhunter.fandom.com/wiki/Alatreon" target="_blank" class="source-btn">Monster Hunter Alatreon Wiki Fandom</a>
+          </div>
+    </div>
+  </div>
+  
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <h3>MHP3RD DATABASE</h3>
+        <p>The Ultimate Guide for Monster Hunter Portable 3rd Players</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy;2025 MHP3rd Database. All Rights Reserved. Not Associated with Capcom.</p>
+    </div>
+  </footer>
+  
+  <script>
+    function showSidebar(){
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display = 'flex'
+    }
+    function hideSidebar(){
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display = 'none'
+    }
+    function scrollList(direction) {
+      const container = document.getElementById('scrollContainer');
+      const item = container.querySelector('.pic-label');
+      const scrollAmount = item.offsetWidth;
+      container.scrollBy({left:scrollAmount * direction, behavior:'smooth'});
+    }
+        function scrollToSection(section) {
+            const headerOffset = 80; 
+
+            if (section === 'home') {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            } else {
+                const radios = document.getElementsByName('monster');
+                let activeId = 'content-1'; 
+                
+                for (const radio of radios) {
+                    if (radio.checked) {
+                        activeId = radio.id.replace('mon', 'content-');
+                        break;
+                    }
+                }
+                
+                const activeContent = document.getElementById(activeId);
+                let targetElement = null;
+
+                if (section === 'info') {
+                    targetElement = activeContent.querySelector('.info-box');
+                } else if (section === 'video') {
+                    targetElement = activeContent.querySelector('.video-box');
+                } else if (section === 'gallery') {
+                    targetElement = activeContent.querySelector('.gallery-box');
+                } else if (section === 'source') {
+                    targetElement = activeContent.querySelector('.source-box');
+                }
+
+                if (targetElement) {
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                    });
+                }
+            }
+            hideSidebar();
+   }
+  </script>
+</body>
+</html>
